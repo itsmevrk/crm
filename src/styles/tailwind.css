@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #005283;
+    --primary-foreground: #ffffff;
+    --primary-light: #a663cc;
+    --primary-dark: #4c318f;
+
+    /* Secondary Colors */
+    --secondary-background: #f8faff;
+    --secondary-foreground: #00263C;
+    --secondary-light: #f9faff;
+    --secondary-dark: #1d2639;
+
+    /* Accent Colors */
+    --accent-orange: #f42b03;
+    --accent-orange-light: #ff762d;
+    --accent-orange-bg: #fff4ee;
+    --accent-yellow: #f3a118;
+    --accent-yellow-light: #ffd734;
+    --accent-green: #00b894;
+    --accent-green-light: #2b9a66;
+    --accent-blue: #0588f0;
+    --accent-blue-light: #1476b9;
+    --accent-red: #dc3e42;
+
+    /* Text Colors */
+    --text-primary: #061d3d;
+    --text-secondary: #061d3d99;
+    --text-muted: #061d3d66;
+    --text-light: #000000a5;
+    --text-white: #ffffff;
+    --text-accent: #f42b03;
+
+    /* Background Colors */
+    --bg-main: #f8faff;
+    --bg-card: #ffffff;
+    --bg-overlay: #ffffff78;
+    --bg-light: #f9f9f9;
+    --bg-blue-light: #e1f6fd;
+    --bg-green-light: #e6f6eb;
+    --bg-orange-light: #ffe6dd;
+    --bg-purple-light: #e6e7ff;
+    --bg-yellow-light: #ffefd6;
+
+    /* Border Colors */
+    --border-primary: #d8e3f3;
+    --border-secondary: #dee3eb;
+    --border-light: #eff1f4;
+    --border-accent: #f42b03;
+    --border-muted: #d2d5dd78;
+    --border-white: #ffffff7f;
+
+    /* Component Colors */
+    --sidebar-background: var(--primary-background);
+    --sidebar-text: var(--text-white);
+    --header-background: var(--bg-card);
+    --header-text: var(--text-primary);
+    --button-primary-bg: var(--accent-orange);
+    --button-primary-text: var(--text-white);
+    --button-secondary-bg: var(--bg-card);
+    --button-secondary-text: var(--text-primary);
+
+    /* Typography Variables */
+    --font-size-xs: 13px;
+    --font-size-sm: 14px;
+    --font-size-base: 15px;
+    --font-size-md: 16px;
+    --font-size-lg: 17px;
+    --font-size-xl: 18px;
+    --font-size-2xl: 19px;
+    --font-size-3xl: 20px;
+    --font-size-4xl: 24px;
+
+    /* Font Weight Variables */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    /* Spacing Variables */
+    --spacing-xs: 2px;
+    --spacing-sm: 4px;
+    --spacing-base: 6px;
+    --spacing-md: 8px;
+    --spacing-lg: 10px;
+    --spacing-xl: 12px;
+    --spacing-2xl: 14px;
+    --spacing-3xl: 16px;
+    --spacing-4xl: 18px;
+    --spacing-5xl: 20px;
+    --spacing-6xl: 24px;
+    --spacing-7xl: 28px;
+    --spacing-8xl: 32px;
+    --spacing-9xl: 40px;
+
+    /* Border Radius Variables */
+    --radius-xs: 2px;
+    --radius-sm: 3px;
+    --radius-base: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 14px;
+    --radius-3xl: 16px;
+    --radius-4xl: 18px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 20px;
+  }
+}
