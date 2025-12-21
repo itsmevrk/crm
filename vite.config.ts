@@ -6,6 +6,7 @@ import tagger from "@dhiwise/component-tagger";
 export default defineConfig({
   build: {
     outDir: "build",
+    manifest: true,
   },
   base: '/crm/',
   plugins: [react(),tagger()],
