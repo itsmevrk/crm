@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: "build",
     manifest: true,
   },
-  base: '/crm/',
+  base: "./",
   plugins: [react(),tagger()],
   resolve: {
     alias: {
