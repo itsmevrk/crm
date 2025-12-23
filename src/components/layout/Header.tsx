@@ -3,7 +3,12 @@ import Button from '../ui/Button';
 import SearchView from '../ui/SearchView';
 import Dropdown from '../ui/Dropdown';
 import BreadCrumb from '../ui/BreadCrumb';
-
+import frameGrayIcon from "@/assets/images/img_frame_gray_900.svg";
+import frameGray20Icon from "@/assets/images/img_frame_gray_900_20x20.svg";
+import notificationIcon from "@/assets/images/img_group_545.png";
+import userProfileImg from "@/assets/images/img_user_profile.png";
+import dropdownArrowIcon from "@/assets/images/img_frame_20x20.svg";
+import searchGrayIcon from "@/assets/images/img_frame_gray_900_20x20.svg";
 const Header = () => {
   const [searchValue, setSearchValue] = useState('');
   const [selectedUser, setSelectedUser] = useState('Kamalesh');
@@ -54,7 +59,7 @@ const Header = () => {
                   text="F"
                   className="text-sm px-2 py-1.5 bg-white rounded-tl-[10px] rounded-bl-[10px] rounded-tr-[30px] rounded-br-[30px] shadow-sm border border-gray-200 "
                   leftImage={{
-                    src: "/images/img_frame_gray_900.svg",
+                    src: frameGrayIcon,
                     width: 14,
                     height: 14
                   }}
@@ -64,7 +69,7 @@ const Header = () => {
               {/* Search Input */}
               <div className="flex items-center gap-2 text-gray-500 px-2 py-1 rounded-4xl">
                 <img
-                  src="/images/img_frame_gray_900_20x20.svg"
+                  src={frameGray20Icon}
                   alt="Search"
                   className="w-5 h-5 flex-shrink-0"
                 />
@@ -88,7 +93,7 @@ const Header = () => {
               aria-label="Notifications"
             >
               <img
-                src="/images/img_group_545.png"
+                src={notificationIcon }
                 alt="Notifications"
                 className="w-6 h-6"
               />
@@ -105,7 +110,7 @@ const Header = () => {
               <div
                 className="w-10 h-10 rounded-full bg-cover bg-center border border-gray-200"
                 style={{
-                  backgroundImage: "url('/images/img_user_profile.png')"
+                  backgroundImage: `url(${userProfileImg})`
                 }}
               />
             </div>
@@ -124,7 +129,7 @@ const Header = () => {
                   options={userOptions}
                   onChange={handleUserChange}
                   rightImage={{
-                    src: "/images/img_frame_20x20.svg",
+                    src: dropdownArrowIcon,
                     width: 16,
                     height: 16
                   }}
@@ -144,7 +149,7 @@ const Header = () => {
           value={searchValue}
           onChange={handleSearchChange}
           leftImage={{
-            src: "/images/img_frame_gray_900_20x20.svg",
+            src: searchGrayIcon,
             width: 20,
             height: 20
           }}

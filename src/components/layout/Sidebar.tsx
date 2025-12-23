@@ -1,7 +1,25 @@
 import React, { useState } from 'react';
 // import SearchView from '../ui/SearchView';
 import SearchView from '../ui/SearchView';
+import sidebarLogo from "@/assets/images/img_sidebar_logo.png";
+import dashboardLogo from "@/assets/images/img_frame_white_a700.svg";
 
+
+import assignmentsIcon from "@/assets/images/img_assignmentsicon.svg";
+import userTimeIcon from "@/assets/images/img_usertime03icon.svg";
+import briefcaseIcon from "@/assets/images/img_briefcase05icon.svg";
+import calendarCheckoutIcon from "@/assets/images/img_calendarcheckout01icon.svg";
+import fingerprintIcon from "@/assets/images/img_fingerprintscanicon.svg";
+
+import saveMoneyIcon from "@/assets/images/img_savemoneydollaricon.svg";
+import walletIcon from "@/assets/images/img_wallet02icon.svg";
+import moneyReceiveIcon from "@/assets/images/img_moneyreceivesquareicon.svg";
+
+import mailIcon from "@/assets/images/img_mail02icon.svg";
+import approvalIcon from "@/assets/images/img_validationapprovalicon.svg";
+import calendarUserIcon from "@/assets/images/img_calendarusericon.svg";
+import searchIcon from "@/assets/images/img_frame.svg";
+import frameIcon from "@/assets/images/img_frame_white_a700_20x20.svg";
 const Sidebar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeMenuItem, setActiveMenuItem] = useState('Dashboard');
@@ -13,7 +31,7 @@ const Sidebar = () => {
         {
           id: 'dashboard',
           name: 'Dashboard',
-          icon: '/images/img_frame_white_a700.svg',
+          icon: dashboardLogo,
           isActive: true,
           gradient: true
         }
@@ -25,31 +43,31 @@ const Sidebar = () => {
         {
           id: 'leave',
           name: 'Leave',
-          icon: '/images/img_assignmentsicon.svg',
+          icon: assignmentsIcon,
           isActive: false
         },
         {
           id: 'permission',
           name: 'Permission',
-          icon: '/images/img_usertime03icon.svg',
+          icon: userTimeIcon,
           isActive: false
         },
         {
           id: 'onduty',
           name: 'On-Duty',
-          icon: '/images/img_briefcase05icon.svg',
+          icon: briefcaseIcon,
           isActive: false
         },
         {
           id: 'onsite',
           name: 'On Site Attendance',
-          icon: '/images/img_calendarcheckout01icon.svg',
+          icon: calendarCheckoutIcon,
           isActive: false
         },
         {
           id: 'mispunch',
           name: 'Mispunch',
-          icon: '/images/img_fingerprintscanicon.svg',
+          icon: fingerprintIcon,
           isActive: false
         }
       ]
@@ -60,19 +78,19 @@ const Sidebar = () => {
         {
           id: 'loan',
           name: 'Loan Application',
-          icon: '/images/img_savemoneydollaricon.svg',
+          icon: saveMoneyIcon,
           isActive: false
         },
         {
           id: 'tds',
           name: 'TDS Declaration',
-          icon: '/images/img_wallet02icon.svg',
+          icon: walletIcon,
           isActive: false
         },
         {
           id: 'reimbursement',
           name: 'Reimbursement',
-          icon: '/images/img_moneyreceivesquareicon.svg',
+          icon: moneyReceiveIcon,
           isActive: false
         }
       ]
@@ -83,13 +101,13 @@ const Sidebar = () => {
         {
           id: 'mailtemplate',
           name: 'Mail Template',
-          icon: '/images/img_mail02icon.svg',
+          icon: mailIcon,
           isActive: false
         },
         {
           id: 'mailmapping',
           name: 'Mail Mapping',
-          icon: '/images/img_mail02icon.svg',
+          icon:mailIcon,
           isActive: false
         }
       ]
@@ -100,13 +118,13 @@ const Sidebar = () => {
         {
           id: 'approvalstage',
           name: 'Approval Stage',
-          icon: '/images/img_validationapprovalicon.svg',
+          icon: approvalIcon,
           isActive: false
         },
         {
           id: 'approvaltemplate',
           name: 'Approval Template',
-          icon: '/images/img_validationapprovalicon.svg',
+          icon: approvalIcon,
           isActive: false
         }
       ]
@@ -117,7 +135,7 @@ const Sidebar = () => {
         {
           id: 'attendancereport',
           name: 'Attendance Report',
-          icon: '/images/img_calendarusericon.svg',
+          icon: calendarUserIcon,
           isActive: false
         },
       ]
@@ -145,7 +163,7 @@ const Sidebar = () => {
       {/* Logo */}
       <div className="p-4 pt-5">
         <img
-          src="/images/img_sidebar_logo.png"
+          src={sidebarLogo}
           alt="Company Logo"
           className="w-48 h-11 mx-auto"
         />
@@ -157,7 +175,7 @@ const Sidebar = () => {
           value={searchQuery}
           onChange={handleSearchChange}
           leftImage={{
-            src: '/images/img_frame.svg',
+            src: searchIcon,
             width: 20,
             height: 20
           }}
@@ -203,7 +221,8 @@ const Sidebar = () => {
                     </span>
                     {item?.special && (
                       <img
-                        src="/images/img_frame_white_a700_20x20.svg"
+                         src={frameIcon}
+
                         alt=""
                         className="w-5 h-5 ml-2"
                       />
@@ -231,7 +250,8 @@ const Sidebar = () => {
           title="Pending Approvals"
         >
           <img
-            src="/images/img_frame_white_a700_20x20.svg"
+              src={frameIcon}
+
             alt="Pending Approvals"
             className="w-5 h-5"
           />

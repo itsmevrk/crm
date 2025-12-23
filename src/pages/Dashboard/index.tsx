@@ -1,7 +1,50 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Button from '../../components/ui/Button';
 import SeekBar from '../../components/ui/SeekBar';
+// Leave background shades
+import yellowLight from "@/assets/images/yellow-light-shade.png";
+import yellowDark from "@/assets/images/yellow-dark-shade.png";
+import redLight from "@/assets/images/red-light-shade.png";
+import redDark from "@/assets/images/red-dark-shade.png";
+import purpleLight from "@/assets/images/purple-light-shade.png";
+import purpleDark from "@/assets/images/purple-dark-shade.png";
+import indigoLight from "@/assets/images/indigo-light-shade.png";
+import indigoDark from "@/assets/images/indigo-dark-shade.png";
 
+// Avatars & icons
+import avatar1 from "@/assets/images/img_rectangle_4781.png";
+import avatar2 from "@/assets/images/img_rectangle_4781_30x30.png";
+import avatar3 from "@/assets/images/img_rectangle_4781_1.png";
+
+import breakIcon1 from "@/assets/images/img_image_1655.png";
+import breakIcon2 from "@/assets/images/img_image_99.png";
+
+import announcementBlue from "@/assets/images/img_frame_2147224794.svg";
+import announcementPurple from "@/assets/images/img_frame_2147224794_deep_purple_a200.svg";
+import announcementRed from "@/assets/images/img_frame_2147224794_red_100.svg";
+
+import approver1 from "@/assets/images/img_image.png";
+import approver2 from "@/assets/images/img_image_24x24.png";
+
+import birthdayIcon from "@/assets/images/img_birthday_cake.png";
+import anniversaryIcon from "@/assets/images/img_image_1357.png";
+import weddingAvatar from "@/assets/images/img_frame_2147224800.png";
+import weddingIcon from "@/assets/images/img_image_1347.png";
+
+// Attendance
+import att1 from "@/assets/images/img_1.svg";
+import att2 from "@/assets/images/img_2.svg";
+import att3 from "@/assets/images/img_3.svg";
+import att4 from "@/assets/images/img_4.svg";
+import att5 from "@/assets/images/img_5.svg";
+import att6 from "@/assets/images/img_5_gray_300_01.svg";
+
+import shiftIcon from "@/assets/images/img_frame_light_blue_800.svg";
+import calendarIcon from "@/assets/images/img_group.svg";
+import prevIcon from "@/assets/images/img_frame_blue_gray_900.svg";
+import nextIcon from "@/assets/images/img_arrow_right.svg";
+import arrowLeftIcon from "@/assets/images/img_arrow_left.svg";
+import arrowRightGrayIcon from "@/assets/images/img_arrow_right_blue_gray_900.svg";
 // Chart component for User Time Log
 const ChartComponent = () => {
   const chartData = [
@@ -98,95 +141,176 @@ const EmployeeDashboard = () => {
   }, []);
 
   // Leave balance data
-  const leaveTypes = [
-    {
-      name: 'Annual Leave',
-      color: '#ffa800',
-      daysLeft: 6,
-      totalDays: 12,
-      bgColor: '#ffffff',
-      bglight: "/images/yellow-light-shade.png",
-      bgdark: "/images/yellow-dark-shade.png"
+  // const leaveTypes = [
+  //   {
+  //     name: 'Annual Leave',
+  //     color: '#ffa800',
+  //     daysLeft: 6,
+  //     totalDays: 12,
+  //     bgColor: '#ffffff',
+  //     bglight: "/images/yellow-light-shade.png",
+  //     bgdark: "/images/yellow-dark-shade.png"
 
-    },
-    {
-      name: 'Bereavement Leave',
-      color: '#ef2917',
-      daysLeft: 10,
-      totalDays: 12,
-      bgColor: '#ffffff',
-      bglight: "/images/red-light-shade.png",
-      bgdark: "/images/red-dark-shade.png"
+  //   },
+  //   {
+  //     name: 'Bereavement Leave',
+  //     color: '#ef2917',
+  //     daysLeft: 10,
+  //     totalDays: 12,
+  //     bgColor: '#ffffff',
+  //     bglight: "/images/red-light-shade.png",
+  //     bgdark: "/images/red-dark-shade.png"
 
-    },
-    {
-      name: 'Sick Leave',
-      color: '#a663cc',
-      daysLeft: 8,
-      totalDays: 12,
-      bgColor: '#ffffff',
-      bglight: "/images/purple-light-shade.png",
-      bgdark: "/images/purple-dark-shade.png"
+  //   },
+  //   {
+  //     name: 'Sick Leave',
+  //     color: '#a663cc',
+  //     daysLeft: 8,
+  //     totalDays: 12,
+  //     bgColor: '#ffffff',
+  //     bglight: "/images/purple-light-shade.png",
+  //     bgdark: "/images/purple-dark-shade.png"
 
-    },
-    {
-      name: 'Casual Leave',
-      color: '#7371fc',
-      daysLeft: 12,
-      totalDays: 12,
-      bgColor: '#ffffff',
-      bglight: "/images/indigo-light-shade.png",
-      bgdark: "/images/indigo-dark-shade.png"
+  //   },
+  //   {
+  //     name: 'Casual Leave',
+  //     color: '#7371fc',
+  //     daysLeft: 12,
+  //     totalDays: 12,
+  //     bgColor: '#ffffff',
+  //     bglight: "/images/indigo-light-shade.png",
+  //     bgdark: "/images/indigo-dark-shade.png"
 
-    }
-  ];
+  //   }
+  // ];
+const leaveTypes = [
+  {
+    name: "Annual Leave",
+    color: "#ffa800",
+    daysLeft: 6,
+    totalDays: 12,
+    bgColor: "#ffffff",
+    bglight: yellowLight,
+    bgdark: yellowDark
+  },
+  {
+    name: "Bereavement Leave",
+    color: "#ef2917",
+    daysLeft: 10,
+    totalDays: 12,
+    bgColor: "#ffffff",
+    bglight: redLight,
+    bgdark: redDark
+  },
+  {
+    name: "Sick Leave",
+    color: "#a663cc",
+    daysLeft: 8,
+    totalDays: 12,
+    bgColor: "#ffffff",
+    bglight: purpleLight,
+    bgdark: purpleDark
+  },
+  {
+    name: "Casual Leave",
+    color: "#7371fc",
+    daysLeft: 12,
+    totalDays: 12,
+    bgColor: "#ffffff",
+    bglight: indigoLight,
+    bgdark: indigoDark
+  }
+];
 
   // Team break days data
-  const teamBreakDays = [
-    {
-      name: 'Albert Flores',
-      dates: '11 Aug - 13 Aug',
-      leaveType: 'Casual Leave',
-      avatar: '/images/img_rectangle_4781.png',
-      icon: '/images/img_image_1655.png'
-    },
-    {
-      name: 'Jenny Wilson',
-      dates: '11 Aug - 13 Aug',
-      leaveType: 'Sick Leave',
-      avatar: '/images/img_rectangle_4781_30x30.png',
-      icon: '/images/img_image_99.png'
-    },
-    {
-      name: 'Jenny Wilson',
-      dates: '11 Aug - 13 Aug',
-      leaveType: 'Sick Leave',
-      avatar: '/images/img_rectangle_4781_1.png',
-      icon: '/images/img_image_99.png'
-    }
-  ];
+  // const teamBreakDays = [
+  //   {
+  //     name: 'Albert Flores',
+  //     dates: '11 Aug - 13 Aug',
+  //     leaveType: 'Casual Leave',
+  //     avatar: '/images/img_rectangle_4781.png',
+  //     icon: '/images/img_image_1655.png'
+  //   },
+  //   {
+  //     name: 'Jenny Wilson',
+  //     dates: '11 Aug - 13 Aug',
+  //     leaveType: 'Sick Leave',
+  //     avatar: '/images/img_rectangle_4781_30x30.png',
+  //     icon: '/images/img_image_99.png'
+  //   },
+  //   {
+  //     name: 'Jenny Wilson',
+  //     dates: '11 Aug - 13 Aug',
+  //     leaveType: 'Sick Leave',
+  //     avatar: '/images/img_rectangle_4781_1.png',
+  //     icon: '/images/img_image_99.png'
+  //   }
+  // ];
+const teamBreakDays = [
+  {
+    name: "Albert Flores",
+    dates: "11 Aug - 13 Aug",
+    leaveType: "Casual Leave",
+    avatar: avatar1,
+    icon: breakIcon1
+  },
+  {
+    name: "Jenny Wilson",
+    dates: "11 Aug - 13 Aug",
+    leaveType: "Sick Leave",
+    avatar: avatar2,
+    icon: breakIcon2
+  },
+  {
+    name: "Jenny Wilson",
+    dates: "11 Aug - 13 Aug",
+    leaveType: "Sick Leave",
+    avatar: avatar3,
+    icon: breakIcon2
+  }
+];
 
   // Company announcements data
-  const announcements = [
-    {
-      title: 'Leadership Update',
-      description: 'Exciting organizational changes are underway to drive product innovation and growth.',
-      icon: '/images/img_frame_2147224794.svg',
-      bgColor: '#ffffff'
-    },
-    {
-      title: 'Policy Update',
-      description: 'We are introducing a flexible hybrid work model to support better work–life balance.',
-      icon: '/images/img_frame_2147224794_deep_purple_a200.svg',
-      bgColor: '#eacfff'
-    },
-    {
-      title: 'Leadership Update',
-      description: 'Exciting organizational changes are underway to drive product innovation and growth.',
-      icon: '/images/img_frame_2147224794_red_100.svg',
-      bgColor: '#ffffff'
-    }
-  ];
+  // const announcements = [
+  //   {
+  //     title: 'Leadership Update',
+  //     description: 'Exciting organizational changes are underway to drive product innovation and growth.',
+  //     icon: '/images/img_frame_2147224794.svg',
+  //     bgColor: '#ffffff'
+  //   },
+  //   {
+  //     title: 'Policy Update',
+  //     description: 'We are introducing a flexible hybrid work model to support better work–life balance.',
+  //     icon: '/images/img_frame_2147224794_deep_purple_a200.svg',
+  //     bgColor: '#eacfff'
+  //   },
+  //   {
+  //     title: 'Leadership Update',
+  //     description: 'Exciting organizational changes are underway to drive product innovation and growth.',
+  //     icon: '/images/img_frame_2147224794_red_100.svg',
+  //     bgColor: '#ffffff'
+  //   }
+  // ];
+const announcements = [
+  {
+    title: "Leadership Update",
+    description: "Exciting organizational changes are underway to drive product innovation and growth.",
+    icon: announcementBlue,
+    bgColor: "#ffffff"
+  },
+  {
+    title: "Policy Update",
+    description: "We are introducing a flexible hybrid work model to support better work–life balance.",
+    icon: announcementPurple,
+    bgColor: "#eacfff"
+  },
+  {
+    title: "Leadership Update",
+    description: "Exciting organizational changes are underway to drive product innovation and growth.",
+    icon: announcementRed,
+    bgColor: "#ffffff"
+  }
+];
 
   // Leave requests data
   const leaveRequests = [
@@ -197,8 +321,8 @@ const EmployeeDashboard = () => {
       statusColor: '#f3a118',
       approvers: [
         { initials: 'JM', bgColor: '#ffe6dd' },
-        { avatar: '/images/img_image.png' },
-        { avatar: '/images/img_image_24x24.png' }
+        { avatar:approver1 },
+        { avatar: approver2}
       ]
     },
     {
@@ -208,8 +332,8 @@ const EmployeeDashboard = () => {
       statusColor: '#0f973d',
       approvers: [
         { initials: 'JM', bgColor: '#ffe6dd' },
-        { avatar: '/images/img_image.png' },
-        { avatar: '/images/img_image_24x24.png' }
+        { avatar: approver1  },
+        { avatar: approver2  }
       ]
     },
     {
@@ -219,8 +343,8 @@ const EmployeeDashboard = () => {
       statusColor: '#f3a118',
       approvers: [
         { initials: 'JM', bgColor: '#ffe6dd' },
-        { avatar: '/images/img_image.png' },
-        { avatar: '/images/img_image_24x24.png' }
+        { avatar: approver1 },
+        { avatar: approver2 }
       ]
     }
   ];
@@ -245,31 +369,32 @@ const EmployeeDashboard = () => {
   ];
 
   // Milestone celebrations data
-  const milestones = [
-    {
-      name: 'Aisha Kapoor',
-      type: 'Birthday',
-      date: 'Oct 12, 2025',
-      initials: 'AK',
-      bgColor: '#ff4d6d',
-      icon: '/images/img_birthday_cake.png'
-    },
-    {
-      name: 'Rohan Menon',
-      type: 'Work Anniversary',
-      date: 'Oct 08, 2025',
-      initials: 'RM',
-      bgColor: '#ffd734',
-      icon: '/images/img_image_1357.png'
-    },
-    {
-      name: 'Rohan Menon',
-      type: 'Wedding Anniversary',
-      date: 'Oct 08, 2025',
-      avatar: '/images/img_frame_2147224800.png',
-      icon: '/images/img_image_1347.png'
-    }
-  ];
+ const milestones = [
+  {
+    name: "Aisha Kapoor",
+    type: "Birthday",
+    date: "Oct 12, 2025",
+    initials: "AK",
+    bgColor: "#ff4d6d",
+    icon: birthdayIcon
+  },
+  {
+    name: "Rohan Menon",
+    type: "Work Anniversary",
+    date: "Oct 08, 2025",
+    initials: "RM",
+    bgColor: "#ffd734",
+    icon: anniversaryIcon
+  },
+  {
+    name: "Rohan Menon",
+    type: "Wedding Anniversary",
+    date: "Oct 08, 2025",
+    avatar: weddingAvatar,
+    icon: weddingIcon
+  }
+];
+
 
   // Calendar data for attendance
   // const calendarWeeks = [
@@ -350,14 +475,23 @@ const EmployeeDashboard = () => {
   ];
 
 
+  // const attendanceLegend = [
+  //   { name: 'Payable Days', icon: '/images/img_1.svg' },
+  //   { name: 'Half - Day', icon: '/images/img_2.svg' },
+  //   { name: 'On - Duty', icon: '/images/img_3.svg' },
+  //   { name: 'Earned Leave', icon: '/images/img_4.svg' },
+  //   { name: 'Sick Leave', icon: '/images/img_5.svg' },
+  //   { name: 'Casual Leave', icon: '/images/img_5_gray_300_01.svg' }
+  // ];
   const attendanceLegend = [
-    { name: 'Payable Days', icon: '/images/img_1.svg' },
-    { name: 'Half - Day', icon: '/images/img_2.svg' },
-    { name: 'On - Duty', icon: '/images/img_3.svg' },
-    { name: 'Earned Leave', icon: '/images/img_4.svg' },
-    { name: 'Sick Leave', icon: '/images/img_5.svg' },
-    { name: 'Casual Leave', icon: '/images/img_5_gray_300_01.svg' }
-  ];
+  { name: "Payable Days", icon: att1 },
+  { name: "Half - Day", icon: att2 },
+  { name: "On - Duty", icon: att3 },
+  { name: "Earned Leave", icon: att4 },
+  { name: "Sick Leave", icon: att5 },
+  { name: "Casual Leave", icon: att6 }
+];
+
 
   const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -573,7 +707,7 @@ const EmployeeDashboard = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <img
-                      src="/images/img_frame_light_blue_800.svg"
+                      src={shiftIcon }
                       alt="Shift"
                       className="w-6 h-6"
                     />
@@ -583,7 +717,7 @@ const EmployeeDashboard = () => {
                   </div>
                   <div className="flex items-center gap-1">
                     <img
-                      src="/images/img_group.svg"
+                      src={calendarIcon }
                       alt="Calendar"
                       className="w-6 h-6"
                     />
@@ -859,12 +993,12 @@ const EmployeeDashboard = () => {
                     </h3>
                     <div className="flex items-center gap-5">
                       <img
-                        src="/images/img_frame_blue_gray_900.svg"
+                        src={prevIcon }
                         alt="Previous"
                         className="w-6 h-6 cursor-pointer"
                       />
                       <img
-                        src="/images/img_arrow_right.svg"
+                        src={nextIcon }
                         alt="Next"
                         className="w-6 h-6 cursor-pointer"
                       />
@@ -969,7 +1103,7 @@ const EmployeeDashboard = () => {
                 <div className="flex items-center gap-5">
                   <button className="w-8 h-8 bg-white border-2 border-[#d2d5dd78] rounded-2xl flex items-center justify-center shadow-sm">
                     <img
-                      src="/images/img_arrow_left.svg"
+                      src={arrowLeftIcon }
                       alt="Previous month"
                       className="w-4 h-4"
                     />
@@ -979,7 +1113,7 @@ const EmployeeDashboard = () => {
                   </h3>
                   <button className="w-8 h-8 bg-white border-2 border-[#d2d5dd78] rounded-2xl flex items-center justify-center shadow-sm">
                     <img
-                      src="/images/img_arrow_right_blue_gray_900.svg"
+                      src={arrowRightGrayIcon }
                       alt="Next month"
                       className="w-4 h-4"
                     />
